@@ -1,47 +1,29 @@
-'use client';
-
-import React from 'react';
-
-const ArrayDisplay = ({ 
-    array = [], 
-    highlightedIndices = [], 
-    currentIndex = -1,
-    searchRange = null,
-    foundIndex = -1
+export const ArrayDisplay = ({ 
+  array = [], 
+  currentIndex = -1, 
+  foundIndex = -1,
+  searchRange = null 
 }) => {
-    const getItemClass = (index) => {
-        let classes = ['array-item'];
+  return (
+    <div className="array-display">
+      {array.map((value, index) => {
+        let className = "array-item";
         
         if (foundIndex === index) {
-            classes.push('found');
+          className += " found";
         } else if (currentIndex === index) {
-            classes.push('current');
-        } else if (highlightedIndices.includes(index)) {
-            classes.push('highlighted');
+          className += " current";
+        } else if (searchRange && index >= searchRange.start && index <= searchRange.end) {
+          className += " in-range";
         }
         
-        if (searchRange && index >= searchRange.left && index <= searchRange.right) {
-            classes.push('in-range');
-        }
-        
-        return classes.join(' ');
-    };
-
-    return (
-        <div className="array-container">
-            <div className="array-display">
-                {array.map((item, index) => (
-                    <div 
-                        key={index}
-                        className={getItemClass(index)}
-                    >
-                        <div className="array-value">{item}</div>
-                        <div className="array-index">{index}</div>
-                    </div>
-                ))}
-            </div>
-        </div>
-    );
-};
-
-export default ArrayDisplay;
+        return (
+          <div key={index} className={className}>
+            <div className="value">{value}</div>
+            <div className="index">{index}</div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
