@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import AlgorithmSelector from './AlgorithmSelector';
-import SearchControls from './SearchControls';
+import SearchControls from './Controls/SearchControls';
 import ArrayDisplay from './ArrayDisplay';
 import { linearSearch, binarySearch, jumpSearch, interpolationSearch } from '../algorithms';
 

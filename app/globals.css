@@ -275,3 +275,170 @@ body {
         width: 100%;
     }
 }
+
+
+/* Search Visualizer Main Styles */
+.search-visualizer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.visualizer-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.visualizer-header h1 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.visualizer-header p {
+    margin: 0;
+    color: #666;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Search Info Styles */
+.search-info {
+    margin: 20px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    align-items: center;
+}
+
+.progress-info h3 {
+    margin: 0 0 8px 0;
+    color: #333;
+    font-size: 16px;
+}
+
+.progress-info p {
+    margin: 0 0 8px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2196F3, #21CBF3);
+    transition: width 0.3s ease;
+}
+
+.speed-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.speed-control label {
+    font-size: 14px;
+    color: #555;
+}
+
+.speed-control input[type="range"] {
+    width: 100px;
+}
+
+.speed-control span {
+    font-size: 14px;
+    color: #666;
+    min-width: 30px;
+}
+
+/* Search Result Styles */
+.search-result {
+    margin: 20px 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.search-result h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+}
+
+.search-result p {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+}
+
+.search-result p:last-child {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-visualizer {
+        padding: 10px;
+    }
+    
+    .visualizer-header h1 {
+        font-size: 24px;
+    }
+    
+    .visualizer-header p {
+        font-size: 14px;
+    }
+    
+    .search-info {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .array-display {
+        gap: 4px;
+    }
+    
+    .array-item {
+        min-width: 40px;
+        padding: 8px 4px;
+    }
+    
+    .array-value {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .algorithm-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .array-item {
+        min-width: 35px;
+        padding: 6px 3px;
+    }
+    
+    .array-value {
+        font-size: 12px;
+    }
+    
+    .array-index {
+        font-size: 10px;
+    }
+}
