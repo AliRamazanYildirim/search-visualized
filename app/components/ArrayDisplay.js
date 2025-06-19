@@ -18,8 +18,16 @@ export const ArrayDisplay = ({
         }
         
         return (
-          <div key={index} className={className}>
+          <div key={index} className={className} style={{ display: "inline-block", margin: "0 10px", textAlign: "center" }}>
             <div className="value">{value}</div>
+            <div
+              style={{
+                borderTop: "1px solid black",
+                margin: "4px 0",
+                width: "100%",
+                minWidth: "24px"
+              }}
+            />
             <div className="index">{index}</div>
           </div>
         );
