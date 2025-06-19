@@ -21,7 +21,7 @@ bun install
 1. Run the development server:
 
 ```bash
-npm run dev
+bun run dev
 ```
 
 1. Open [http://localhost:3000](http://localhost:3000) in your browser
@@ -43,19 +43,20 @@ npm run dev
 
 ## Technologies Used
 
-- Next.js 14
-- React 18
+- Next.js 15
+- React 19
 - CSS3 with animations
 - Responsive design
 
 ## Project Structure
 
-```code
+```path
 app/
 ├── components/
+│   ├── Controls/
+│   │   └── SearchControls.js
 │   ├── SearchVisualizer.js
 │   ├── AlgorithmSelector.js
-│   ├── SearchControls.js
 │   └── ArrayDisplay.js
 ├── algorithms/
 │   ├── linearSearch.js
