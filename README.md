@@ -24,7 +24,7 @@ bun install
 bun run dev
 ```
 
-1. Open [http://localhost:3000](http://localhost:3000) in your browser
+1. Open [search-visualized.onrender.com](https://search-visualized.onrender.com) in your browser
 
 ## How to Use
 
