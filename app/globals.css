@@ -153,3 +153,125 @@ body {
     color: #666;
     line-height: 1.4;
 }
+
+/* Search Controls Styles */
+.search-controls {
+    margin: 20px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.controls-section {
+    margin-bottom: 24px;
+}
+
+.controls-section:last-child {
+    margin-bottom: 0;
+}
+
+.controls-section h3 {
+    margin: 0 0 16px 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.array-input-group,
+.search-input-group {
+    margin-bottom: 12px;
+}
+
+.array-input-group label,
+.search-input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #555;
+}
+
+.array-input-group textarea,
+.search-input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.array-input-group textarea:focus,
+.search-input-group input:focus {
+    outline: none;
+    border-color: #2196F3;
+}
+
+.array-input-group textarea:disabled,
+.search-input-group input:disabled {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+}
+
+.array-buttons,
+.search-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primary-btn {
+    background: #2196F3;
+    color: white;
+}
+
+.primary-btn:hover:not(:disabled) {
+    background: #1976D2;
+    transform: translateY(-1px);
+}
+
+.primary-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.secondary-btn {
+    background: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.secondary-btn:hover:not(:disabled) {
+    background: #e0e0e0;
+    transform: translateY(-1px);
+}
+
+.secondary-btn:disabled {
+    background: #f8f8f8;
+    color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+@media (max-width: 768px) {
+    .array-buttons,
+    .search-buttons {
+        flex-direction: column;
+    }
+    
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+    }
+}
