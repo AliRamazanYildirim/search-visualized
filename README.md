@@ -57,7 +57,8 @@ app/
 │   │   └── SearchControls.js
 │   ├── SearchVisualizer.js
 │   ├── AlgorithmSelector.js
-│   └── ArrayDisplay.js
+│   ├── ArrayDisplay.js
+│   └── ConsoleSignature.js 
 ├── algorithms/
 │   ├── linearSearch.js
 │   ├── binarySearch.js
